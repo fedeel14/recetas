@@ -73,23 +73,24 @@
 
                     <!-- Nombre -->
                     <div class="form-control">
-                        <label for="">Nombre:</label>
-                        <input type="text" name="firstname" id="firstname" pattern="[a-zA-Z0-9]+"
-                            placeholder="Escriba su Nombre" size="20" maxlength="20" required>
+                        <label for="firstname">Nombre:</label>
+                        <input type="text" name="firstname" id="firstname" pattern="[a-zA-Z0-9]+" 
+                               title="No se pueden utilizar caracteres especiales. Solo letras y números son permitidos."
+                               placeholder="Escriba su Nombre" size="20" maxlength="20" required>
                     </div>
                     <div class="error" id="error-firstname"></div>
 
                     <!-- Apellido -->
                     <div class="form-control">
                         <label for="">Apellido</label>
-                        <input type="text" name="lastname" id="lastname" pattern="[a-zA-Z0-9]+" required>
+                        <input type="text" name="lastname" id="lastname" pattern="[a-zA-Z0-9]+" title="No se pueden utilizar caracteres especiales. Solo letras y números son permitidos." required>
                     </div>
                     <div class="error" id="error-lastname"></div>
 
                     <!-- Direccion -->
                     <div class="form-control">
                         <label for="">Dirección:</label>
-                        <input type="text" name="direccion" id="direccion" pattern="[a-zA-Z0-9]+" required>
+                        <input type="text" name="direccion" id="direccion" pattern="[a-zA-Z0-9]+" title="No se pueden utilizar caracteres especiales. Solo letras y números son permitidos." required>
                     </div>
                     <div class="error" id="error-direccion"></div>
 
