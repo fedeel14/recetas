@@ -77,8 +77,6 @@ header {
     /* Espacio entre los mapas */
     border: 0;
     border-radius: 10px;
-    loading="lazy";
-    referrerpolicy="no-referrer-when-downgrade";
 }
 
 .footer {
