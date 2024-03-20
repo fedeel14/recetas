@@ -1,0 +1,95 @@
+/* Comentario */
+/* Selector Universal */
+* {
+    /* Cambia este valor al color deseado  */
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    font-family: 'Numito', sans-serif;
+}
+
+
+/* Estilo por etiqueta */
+
+body {
+    background-color: aqua;
+}
+
+table,
+th,
+td {
+    border: solid rgb(17, 14, 14);
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+header {
+    background-color: black;
+    color: white;
+}
+
+/* Selector de clase - Se puede reutilizar */
+
+.nav {
+    background-color: gray !important;
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 10px;
+    font-size: 2vw;
+}
+
+.coccion {
+    color: green;
+    margin-top: 20px;
+}
+
+.titulo {
+    font-weight: bold;
+    text-align: center;
+    text-decoration: underline;
+    color: #462f2f;
+    background-color: rgb(116, 112, 112);
+}
+
+.titulo-tabla {
+
+    font-size: 20px;
+}
+
+.receta {
+    text-align: justify;
+    margin: auto;
+    width: 70%;
+}
+
+/* Estilo para hacer el iframe del mapa responsivo */
+.map-container {
+    width: 20%;
+    /* Hacer el iframe responsivo */
+    height: 100px;
+    /* Altura fija, puedes ajustar según necesites */
+    margin-bottom: 30px;
+    /* Espacio entre los mapas */
+    border: 0;
+    border-radius: 10px;
+    loading="lazy";
+    referrerpolicy="no-referrer-when-downgrade";
+}
+
+.footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 2vw;
+}
+
+/* Selector de ID - Similar se aplica una sola vez */
+
+
+/* Estilo barra de Busqueda */
