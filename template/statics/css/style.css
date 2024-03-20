@@ -29,6 +29,9 @@ header {
     color: white;
 }
 
+a {
+    text-decoration: none; /* Elimina el subrayado predeterminado del enlace */
+}
 
 /* Selector de clase - Se puede reutilizar */
 
@@ -49,7 +52,7 @@ header {
 
 .titulo {
     font-weight: bold;
-    text-align: center;
+    text-align: left;
     text-decoration: underline;
     color: #462f2f;
     background-color: rgb(116, 112, 112);
@@ -78,9 +81,6 @@ header {
     border-radius: 10px;
 }
 
-a {
-    text-decoration: none; /* Elimina el subrayado predeterminado del enlace */
-  }
 
 .footer {
     background-color: black;
