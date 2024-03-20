@@ -1,19 +1,17 @@
 /* Comentario */
 /* Selector Universal */
-* {
-    /* Cambia este valor al color deseado  */
+
+body {
+    background-color: aqua; /* Cambia este valor al color deseado */
     margin: 0;
     padding: 0;
     text-align: left;
     font-family: 'Numito', sans-serif;
+    text-decoration: none;
 }
 
 
 /* Estilo por etiqueta */
-
-body {
-    background-color: aqua;
-}
 
 table,
 th,
@@ -31,16 +29,17 @@ header {
     color: white;
 }
 
+
 /* Selector de clase - Se puede reutilizar */
 
 .nav {
-    background-color: gray !important;
+    background-color: gray;
     color: white;
     text-decoration: none;
     padding: 5px;
     border-radius: 5px;
     margin: 10px;
-    font-size: 2vw;
+    font-size:2vw;
 }
 
 .coccion {
@@ -79,12 +78,16 @@ header {
     border-radius: 10px;
 }
 
+a {
+    text-decoration: none; /* Elimina el subrayado predeterminado del enlace */
+  }
+
 .footer {
     background-color: black;
     color: white;
     text-align: center;
     margin-top: 10px;
-    font-size: 2vw;
+    font-size:1vw;
 }
 
 /* Selector de ID - Similar se aplica una sola vez */
