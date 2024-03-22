@@ -1,5 +1,5 @@
-/* Comentario */
-/* Selector Universal */
+/* Definicion de Variables */
+
 
 :root {
     --bg-color: #363a6e89;
@@ -11,6 +11,11 @@
     --bg-input-color: #4f31572c;
 }
 
+/* Selector Universal */
+
+
+/* Estilo por etiqueta */
+
 body {
     background-color: var(--bg-color);
     /* Cambia este valor al color deseado */
@@ -19,15 +24,10 @@ body {
     text-align: left;
     font-family: "Nunito Sans", sans-serif;
     font-optical-sizing: auto;
-    font-weight: <weight>;
+    font-weight: normal;
     font-style: normal;
-    font-variation-settings:
-        "wdth" 100,
-        "YTLC" 500;
-}
-
-
-/* Estilo por etiqueta */
+    font-variation-settings: "wdth" 100;
+     }
 
 table,
 th,
@@ -69,6 +69,7 @@ a {
     font-family: "Sofia", cursive;
     font-weight: 400;
     font-style: normal;
+    text-align: start;
 }
 
 .titulo {
