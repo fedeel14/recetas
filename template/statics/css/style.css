@@ -27,7 +27,7 @@ body {
     font-weight: normal;
     font-style: normal;
     font-variation-settings: "wdth" 100;
-     }
+}
 
 table,
 th,
@@ -58,7 +58,7 @@ a {
     text-decoration: none;
     padding: 5px;
     border-radius: 5px;
-    margin: 10px;
+    margin: 5px;
     font-size: 1vw;
 }
 
