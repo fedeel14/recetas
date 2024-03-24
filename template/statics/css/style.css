@@ -1,17 +1,33 @@
-/* Comentario */
-/* Selector Universal */
+/* Definicion de Variables */
 
-body {
-    background-color: aqua; /* Cambia este valor al color deseado */
-    margin: 0;
-    padding: 0;
-    text-align: left;
-    font-family: 'Numito', sans-serif;
-    text-decoration: none;
+
+:root {
+    --bg-color: #363a6e89;
+    /* Color de fondo */
+    --primary-color: #9f3647;
+    --secondary-color: #ffc098;
+    --third-color: #db4648;
+    --third-bis-color: #db4648f2;
+    --bg-input-color: #4f31572c;
 }
+
+/* Selector Universal */
 
 
 /* Estilo por etiqueta */
+
+body {
+    background-color: var(--bg-color);
+    /* Cambia este valor al color deseado */
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
 
 table,
 th,
@@ -29,6 +45,10 @@ header {
     color: white;
 }
 
+a {
+    text-decoration: none;
+    /* Elimina el subrayado predeterminado del enlace */
+}
 
 /* Selector de clase - Se puede reutilizar */
 
@@ -38,18 +58,23 @@ header {
     text-decoration: none;
     padding: 5px;
     border-radius: 5px;
-    margin: 10px;
-    font-size:2vw;
+    margin: 5px;
+    font-size: 1vw;
 }
 
 .coccion {
     color: green;
     margin-top: 20px;
+    /* Google font */
+    font-family: "Sofia", cursive;
+    font-weight: 400;
+    font-style: normal;
+    text-align: start;
 }
 
 .titulo {
     font-weight: bold;
-    text-align: center;
+    text-align: left;
     text-decoration: underline;
     color: #462f2f;
     background-color: rgb(116, 112, 112);
@@ -68,27 +93,23 @@ header {
 
 /* Estilo para hacer el iframe del mapa responsivo */
 .map-container {
-    width: 20%;
+    width: 30vw;
     /* Hacer el iframe responsivo */
-    height: 100px;
-    /* Altura fija, puedes ajustar según necesites */
     margin-bottom: 30px;
     /* Espacio entre los mapas */
     border: 0;
     border-radius: 10px;
 }
 
-a {
-    text-decoration: none; /* Elimina el subrayado predeterminado del enlace */
-  }
 
 .footer {
     background-color: black;
     color: white;
     text-align: center;
     margin-top: 10px;
-    font-size:1vw;
+    font-size: 1vw;
 }
+
 
 /* Selector de ID - Similar se aplica una sola vez */
 

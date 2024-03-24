@@ -7,30 +7,39 @@
 
     <!-- Css Link Esxterno -->
     <link rel="stylesheet" href="./statics/css/style.css">
-    
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+
+    <!-- Script de Fontawesome Iconos-->
+    <script src="https://kit.fontawesome.com/86dbb3fae5.js" crossorigin="anonymous"></script>
+
+
+
     <title>Recetas de Familia</title>
-    
+
 </head>
 
 <body>
     <header>
         <nav>
             <!-- Navegación Menu -->
-            <br>
             <div>
-                <a class="nav" class="nav" href="/"><span>Home<span></a>
+                <i class="fa-solid fa-kitchen-set"></i>
+                <a class="nav" href="/"><span>Home<span></a>
                 <a class="nav" href="./location.html"><span>Sucursales</span></a>
                 <a class="nav" href="./register.html"><span>Registrese</span></a>
                 <a class="nav" href="./cocina.html"><span>Cocina</span></a>
                 <a class="nav" href="./disco.html"><span>Disco</span></a>
                 <a class="nav" href="./parrilla.html"><span>Parrilla</span></a>
             </div>
-            <br>
+
         </nav>
         <h1 class="titulo">Recetas de Famila </h1>
-
-
     </header>
+
     <main>
 
         <!--Fromulario -->
@@ -43,23 +52,27 @@
                     <!-- Nombre -->
                     <div class="form-control">
                         <label for="firstname">Nombre:</label>
-                        <input type="text" name="firstname" id="firstname" pattern="[a-zA-Z0-9]+" 
-                               title="No se pueden utilizar caracteres especiales. Solo letras y números son permitidos."
-                               placeholder="Escriba su Nombre" size="20" maxlength="20" required>
+                        <input type="text" name="firstname" id="firstname" pattern="[a-zA-Z0-9]+"
+                            title="No se pueden utilizar caracteres especiales. Solo letras y números son permitidos."
+                            placeholder="Escriba su Nombre" size="20" maxlength="20" required>
                     </div>
                     <div class="error" id="error-firstname"></div>
 
                     <!-- Apellido -->
                     <div class="form-control">
                         <label for="">Apellido</label>
-                        <input type="text" name="lastname" id="lastname" pattern="[a-zA-Z0-9]+" title="No se pueden utilizar caracteres especiales. Solo letras y números son permitidos." required>
+                        <input type="text" name="lastname" id="lastname" pattern="[a-zA-Z0-9]+"
+                            title="No se pueden utilizar caracteres especiales. Solo letras y números son permitidos."
+                            placeholder="Escriba su Aapellido" required>
                     </div>
                     <div class="error" id="error-lastname"></div>
 
                     <!-- Direccion -->
                     <div class="form-control">
                         <label for="">Dirección:</label>
-                        <input type="text" name="direccion" id="direccion" pattern="[a-zA-Z0-9]+" title="No se pueden utilizar caracteres especiales. Solo letras y números son permitidos." required>
+                        <input type="text" name="direccion" id="direccion" pattern="[a-zA-Z0-9]+"
+                            title="No se pueden utilizar caracteres especiales. Solo letras y números son permitidos."
+                            placeholder="Escriba su Dirección" required>
                     </div>
                     <div class="error" id="error-direccion"></div>
 
@@ -92,7 +105,7 @@
                             <option value="BR">Brasil</option>
                         </select>
                     </div>
-                    
+
                     <!-- mail -->
                     <div class="form-control">
                         <label for="">Mail:</label>
@@ -117,7 +130,7 @@
                         <input type="radio" name="genero" value="2" required>Femenino
                         <input type="radio" name="genero" value="3" required>No Binario
                     </div>
-                    
+
                     <!-- Estudios -->
                     <div class="form-control">
                         <label for="">Estudios</label>
