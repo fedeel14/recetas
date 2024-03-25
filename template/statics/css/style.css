@@ -64,12 +64,19 @@ a {
 
 .coccion {
     color: green;
-    margin-top: 20px;
+    margin-top: 10px;
     /* Google font */
     font-family: "Sofia", cursive;
-    font-weight: 400;
     font-style: normal;
     text-align: start;
+}
+
+.coccion a {
+    display: inline-block; /* Hace que los elementos de ancla se comporten como bloques en línea */
+    margin-left: 10px; /* Establece un margen a la izquierda para el texto */
+}
+.coccion i {
+    width: 25px; /* Establece un ancho fijo para los íconos */
 }
 
 .titulo {
