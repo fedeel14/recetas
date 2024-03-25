@@ -1,2 +1,2 @@
 # recetas
-Receta Pratica Codo a Codo
+Receta Practica Codo a Codo
