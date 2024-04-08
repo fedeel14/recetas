@@ -108,6 +108,11 @@ a {
     border-radius: 10px;
 }
 
+.error{
+    display: none;
+    color: red;
+}
+
 
 .footer {
     background-color: black;
