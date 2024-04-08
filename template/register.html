@@ -140,6 +140,24 @@
                         <input type="checkbox" name="estudio" value="4">Universitarios
                         <input type="checkbox" name="estudio" value="5">otros
                     </div>
+
+                    <div class="form-control">
+                        <label for="">Sala: </label>
+                        <input type="checkbox" name="Nivel" value="1" onclick="limitarSeleccion(this)"> A
+                        <input type="checkbox" name="Nivel" value="2" onclick="limitarSeleccion(this)"> B
+                        <input type="checkbox" name="Nivel" value="3" onclick="limitarSeleccion(this)"> C
+                        <input type="checkbox" name="Nivel" value="4" onclick="limitarSeleccion(this)"> D
+                    </div>
+                    
+                    <script>
+                    function limitarSeleccion(checkbox) {
+                        var checkboxes = document.getElementsByName("Nivel");
+                        for (var i = 0; i < checkboxes.length; i++) {
+                            checkboxes[i].checked = false;
+                        }
+                        checkbox.checked = true;
+                    }
+                    </script>
                     <br><br>
 
                     <!-- Comentario -->
