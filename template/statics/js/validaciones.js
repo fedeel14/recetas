@@ -18,20 +18,3 @@ function validarCampo(inputId, errorId, pattern) {
         error.style.display = "none";
     }
 }
-
-// Asignar eventos de entrada a los campos para validar en tiempo real
-document.getElementById("firstname").addEventListener("input", function() {
-    validarCampo("firstname", "error-firstname", /^[a-zA-Z]+$/);
-});
-
-document.getElementById("lastname").addEventListener("input", function() {
-    validarCampo("lastname", "error-lastname", /^[a-zA-Z]+$/);
-});
-
-document.getElementById("direccion").addEventListener("input", function() {
-    validarCampo("direccion", "error-direccion", /^[a-zA-Z0-9\s]+$/);
-});
-
-document.getElementById("email").addEventListener("input", function() {
-    validarCampo("email", "error-mail", /^[^\s@]+@[^\s@]+\.[^\s@]+$/);
-});

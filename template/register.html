@@ -110,7 +110,7 @@
                 <div class="form-control">
                     <label for="email">Mail:</label>
                     <input type="email" name="email" id="email" required>
-                    <div class="error" id="error-mail">Por favor, ingrese un correo electrónico válido.</div>
+                    <div class="error" id="error-email">Por favor, ingrese un correo electrónico válido.</div>
                 </div>
 
                 <!-- password -->
@@ -164,6 +164,28 @@
                     <button type="reset">Borrar Datos</button>
                 </div>
 
+                <script src="./statics/js/validaciones.js"></script>
+                <script>
+                    
+                    // Asignar eventos de entrada a los campos para validar en tiempo real
+                    document.getElementById("firstname").addEventListener("input", function () {
+                        validarCampo("firstname", "error-firstname", /^[a-zA-Z\s]+$/);
+                    });
+
+                    document.getElementById("lastname").addEventListener("input", function () {
+                        validarCampo("lastname", "error-lastname", /^[a-zA-Z\s]+$/);
+                    });
+
+                    document.getElementById("direccion").addEventListener("input", function () {
+                        validarCampo("direccion", "error-direccion", /^[a-zA-Z0-9\s]+$/);
+                    });
+
+                    document.getElementById("email").addEventListener("input", function () {
+                        validarCampo("email", "error-email", /^[^\s@]+@[^\s@]+\.[^\s@]+$/);
+                    });
+
+                </script>
+
                 </form>
             </fieldset>
 
@@ -173,13 +195,15 @@
     <br>
     <br>
     <br>
-    <script src="./statics/js/validaciones.js"></script>
+
     <!-- Pie -->
     <footer class="footer">
         <a class="footer" href="">Términos y condiciones</a><br>
         <a class="footer" href="">Preguntas frecuentes</a><br>
         <a class="footer" href="">Ayuda</a>
     </footer>
+
+    <script src="validaciones.js"></script>
 
 </body>
 
