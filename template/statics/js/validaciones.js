@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 document.getElementById("error-dni").textContent = "Por favor, ingrese un Documento válido. Sin puntos \".\"";
             } else {
                 // Aquí se pueden añadir otras verificaciones de validez según sea necesario
-                document.getElementById("error-dni").textContent = "Por favor, ingrese un Documento válido. Sin puntos 3";
+                document.getElementById("error-dni").textContent = "Por favor, ingrese un Documento válido. Sin puntos ";
             }
         }
     };
@@ -46,6 +46,30 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById("error-dni").style.display = "none";
     };
 });
+
+
+// Asignar eventos de entrada a los campos para validar en tiempo real, Toma los campos en el Input del usuarios,el error definido y el Pattern para hacer la validación.
+document.getElementById("firstname").addEventListener("input", function () {
+    validarCampo("firstname", "error-firstname", /^[a-zA-Z\s]+$/);
+});
+
+document.getElementById("lastname").addEventListener("input", function () {
+    validarCampo("lastname", "error-lastname", /^[a-zA-Z\s]+$/);
+});
+
+document.getElementById("direccion").addEventListener("input", function () {
+    validarCampo("direccion", "error-direccion", /^[a-zA-Z0-9\s]+$/);
+});
+
+document.getElementById("telefono").addEventListener("input", function () {
+    validarCampo("telefono", "error-telefono", /[0-9]{6,10}/);
+});
+
+document.getElementById("email").addEventListener("input", function () {
+    validarCampo("email", "error-email", /^[^\s@]+@[^\s@]+\.[^\s@]+$/);
+});
+
+
 
 
 
