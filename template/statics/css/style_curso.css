@@ -158,3 +158,10 @@ body {
      -moz-appearance: textfield;
      appearance: textfield;
  }
+
+
+ input::placeholder {
+    color: #909090; /* Ajusta el color para mejorar contraste si es necesario */
+    font-size: 0.95em; /* Asegúrate de que el tamaño del texto sea legible */
+    opacity: 1; /* En algunos navegadores, puedes necesitar ajustar la opacidad */
+}
