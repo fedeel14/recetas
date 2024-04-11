@@ -4,46 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Externo -->
+    <link rel="stylesheet" href="./statics/css/style_curso.css">
 
-    <!-- Css Link Esxterno -->
-    <link rel="stylesheet" href="./statics/css/style.css">
+    <!-- Favicon -->
+    <link rel="icon" href="../static/img/favicon.ico">
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
-
-    <!-- Script de Fontawesome Iconos-->
-    <script src="https://kit.fontawesome.com/86dbb3fae5.js" crossorigin="anonymous"></script>
-
-
-
-    <title>Recetas de Familia</title>
+       <!-- 1-Agrego una etiqueta link y en href pego la URL CDN Links desde https://getbootstrap.com/docs/5.2/getting-started/introduction/ -->
+       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+       <!-- Agrego etiqueta para boostrap java -->
+       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+        
+    <title>Receta - Registro</title>
 
 </head>
 
 <body>
-    <header>
-        <nav>
-            <!-- Navegación Menu -->
-            <div>
-                <i class="fa-solid fa-kitchen-set"></i>
-                <a class="nav" href="/"><span>Home<span></a>
-                <a class="nav" href="./location.html"><span>Sucursales</span></a>
-                <a class="nav" href="./register.html"><span>Registrese</span></a>
-                <a class="nav" href="./cocina.html"><span>Cocina</span></a>
-                <a class="nav" href="./disco.html"><span>Disco</span></a>
-                <a class="nav" href="./parrilla.html"><span>Parrilla</span></a>
-            </div>
 
-        </nav>
-        <h1 class="titulo">Recetas de Famila </h1>
-    </header>
+    <header></header>
 
     <main>
-
         <!--Fromulario -->
-        <section id="form-wrapper">
+        <section class="">
             <fieldset>
                 <legend><strong>FORMULARIO DE REGISTRO</strong></legend>
 
@@ -66,6 +48,27 @@
                         <div class="error" id="error-lastname">Por favor, ingrese un apellido válido.</div>
                     </div>
 
+                     <!-- DNI -->
+
+                    <div class="form-control">
+                        <label for="dni">DNI:</label>
+                        <input type="number" name="dni" id="dni"
+                            title="No se pueden utilizar caracteres especiales. Solo números."
+                            placeholder="Escriba su Documento" required
+                            min="100000" max="9999999999" inputmode="numeric">
+                        <div class="error" id="error-dni">Por favor, ingrese un Documento válido.</div>
+                    </div>
+                    
+
+                    <!-- Telefono -->
+                    <div class="form-control">
+                        <label for="telefono">Telefono:</label>
+                        <input type="number" name="telefono" id="telefono"
+                            title="No se pueden utilizar caracteres especiales. Solo Numeros."
+                            placeholder="Escriba su Telefono" required  min="100000" max="9999999999" inputmode="numeric">
+                        <div class="error" id="error-telefono">Por favor, ingrese un Telefono válido.</div>
+                    </div>
+
                     <!-- Dirección -->
                     <div class="form-control">
                         <label for="direccion">Dirección:</label>
@@ -74,134 +77,118 @@
                             placeholder="Escriba su Dirección" required>
                         <div class="error" id="error-direccion">Por favor, ingrese una dirección válida.</div>
                     </div>
-                </form>
 
-                <!-- Cuidad -->
-                <div class="form-control">
-                    <label for="">Ciudad:</label>
-                    <input type="text" name="ciudad" id="ciudad">
-                </div>
-                <div class="error" id="error-ciudad"></div>
+                    <!-- Cuidad -->
+                    <div class="form-control">
+                        <label for="">Ciudad:</label>
+                        <input type="text" name="ciudad" id="ciudad">
+                    </div>
+                    <div class="error" id="error-ciudad"></div>
 
-                <!-- Codigo Postal -->
-                <div class="form-control">
-                    <label for="">Codigo Postal:</label>
-                    <input type="text" name="codigopostal" id="codigopostal" required>
-                </div>
-                <div class="error" id="error-codigopostal"></div>
+                    <!-- Codigo Postal -->
+                    <div class="form-control">
+                        <label for="">Codigo Postal:</label>
+                        <input type="text" name="codigopostal" id="codigopostal" required>
+                    </div>
+                    <div class="error" id="error-codigopostal"></div>
 
-                <!-- Fecha de nacimiento -->
-                <div class="form-control">
-                    <label for="">Fecha de Nacimiento;</label>
-                    <input type="date" name="bithday" id="birthday" required>
-                </div>
+                    <!-- Fecha de nacimiento -->
+                    <div class="form-control">
+                        <label for="">Fecha de Nacimiento;</label>
+                        <input type="date" name="bithday" id="birthday" required>
+                    </div>
 
-                <!-- País -->
-                <div class="form-control">
-                    <select name="country" id="country" class="form-select">
-                        <option value="">País</option>
-                        <option value="AR">Argentina</option>
-                        <option value="BO">Bolivia</option>
-                        <option value="BR">Brasil</option>
-                    </select>
-                </div>
+                    <!-- Mail -->
+                    <div class="form-control">
+                        <label for="email">Mail:</label>
+                        <input type="email" name="email" id="email" required>
+                        <div class="error" id="error-email">Por favor, ingrese un correo electrónico válido.</div>
+                    </div>
 
-                <!-- Mail -->
-                <div class="form-control">
-                    <label for="email">Mail:</label>
-                    <input type="email" name="email" id="email" required>
-                    <div class="error" id="error-email">Por favor, ingrese un correo electrónico válido.</div>
-                </div>
+                    <!-- password -->
+                    <div class="form-control">
+                        <label for="">Contraseña:</label>
+                        <input type="password" name="password" id="password" required>
+                    </div>
+                    <div class="error" id="error-password"></div>
+                    <br>
 
-                <!-- password -->
-                <div class="form-control">
-                    <label for="">Contraseña:</label>
-                    <input type="password" name="password" id="password" required>
-                </div>
-                <div class="error" id="error-password"></div>
-                <br>
+                    <!-- Genero -->
+                    <div class="form-control">
+                        <label for="">Género: </label>
+                        <input type="radio" name="genero" value="1" required>Masculino
+                        <input type="radio" name="genero" value="2" required>Femenino
+                        <input type="radio" name="genero" value="3" required>No Binario
+                    </div>
+                    <br>
+
+                    <div class="form-control">
+                        <!-- En este código, cada vez que se hace clic en una de las checkboxes, se llama a la función limitarSeleccion(this), donde this hace referencia a la checkbox que fue seleccionada. Esta función desactiva todas las otras checkboxes y deja solo la seleccionada. De esta manera, solo una opción puede ser seleccionada a la vez.  -->
+                        <label for="">Sala: </label>
+                        <input type="checkbox" name="Nivel" value="1" onclick="limitarSeleccion(this)"> A
+                        <input type="checkbox" name="Nivel" value="2" onclick="limitarSeleccion(this)"> B
+                        <input type="checkbox" name="Nivel" value="3" onclick="limitarSeleccion(this)"> C
+                        <input type="checkbox" name="Nivel" value="4" onclick="limitarSeleccion(this)"> D
+                    </div>
+
+                      <!-- Turno -->
+                      <div class="form-control">
+                        <label for="">Turno: </label>
+                        <input type="radio" name="genero" value="1" required>Mañana
+                        <input type="radio" name="genero" value="2" required>Tarde
+                    </div>
+
+                    <br><br>
+
+                    <!-- Perfil-->
+                    <div class="form-control">
+                        <label for="">Perfil de Usuario: </label>
+                        <select name="perfil" id="perfil" class="form-select">
+                            <option value="">Alumna/o</option>
+                            <option value="">Maestra/o</option>
+                            <option value="">Admin</option>
+
+                        </select>
+                    </div>
+                    <br>
 
 
-                <!-- Genero -->
-                <div class="form-control">
-                    <label for="">Género: </label>
-                    <input type="radio" name="genero" value="1" required>Masculino
-                    <input type="radio" name="genero" value="2" required>Femenino
-                    <input type="radio" name="genero" value="3" required>No Binario
-                </div>
-
-                <!-- Estudios -->
-                <div class="form-control">
-                    <label for="">Estudios</label>
-                    <input type="checkbox" name="estudio" value="1">Primario
-                    <input type="checkbox" name="estudio" value="2">Secundarios
-                    <input type="checkbox" name="estudio" value="3">Terciarios
-                    <input type="checkbox" name="estudio" value="4">Universitarios
-                    <input type="checkbox" name="estudio" value="5">otros
-                </div>
-
-                <div class="form-control">
-                    <label for="">Sala: </label>
-                    <input type="checkbox" name="Nivel" value="1" onclick="limitarSeleccion(this)"> A
-                    <input type="checkbox" name="Nivel" value="2" onclick="limitarSeleccion(this)"> B
-                    <input type="checkbox" name="Nivel" value="3" onclick="limitarSeleccion(this)"> C
-                    <input type="checkbox" name="Nivel" value="4" onclick="limitarSeleccion(this)"> D
-                </div>
-                <br><br>
-
-                <!-- Comentario -->
-                <div>
-                    <label for="comentarios">Deje su comentarios:</label><br>
-                    <textarea name="comentario" id="comentario" cols="30" rows="5"
-                        placeholder="Deje aqui su reseña"></textarea>
-                </div>
-
-                <br>
-
-                <!-- Enviar y Borrar Datos-->
-                <div>
-                    <button type="submit">Enviar Datos</button>
-                    <button type="reset">Borrar Datos</button>
-                </div>
-
-                <script src="./statics/js/validaciones.js"></script>
-                <script>
-                    
-                    // Asignar eventos de entrada a los campos para validar en tiempo real
-                    document.getElementById("firstname").addEventListener("input", function () {
-                        validarCampo("firstname", "error-firstname", /^[a-zA-Z\s]+$/);
-                    });
-
-                    document.getElementById("lastname").addEventListener("input", function () {
-                        validarCampo("lastname", "error-lastname", /^[a-zA-Z\s]+$/);
-                    });
-
-                    document.getElementById("direccion").addEventListener("input", function () {
-                        validarCampo("direccion", "error-direccion", /^[a-zA-Z0-9\s]+$/);
-                    });
-
-                    document.getElementById("email").addEventListener("input", function () {
-                        validarCampo("email", "error-email", /^[^\s@]+@[^\s@]+\.[^\s@]+$/);
-                    });
-
-                </script>
+                    <!-- Enviar y Borrar Datos-->
+                    <div>
+                        <button type="submit">Alta Usuario</button>
+                        <button type="submit">Modificación Usuario</button>
+                        <button type="submit">Baja Usuario</button>
+                        <button type="reset">Reset Datos</button>
+                    </div>
+                    <br><br>
 
                 </form>
             </fieldset>
-
         </section>
-
     </main>
-    <br>
+    <script src="./statics/js/validaciones.js"></script>
+    <script>
 
-    <!-- Pie -->
-    <footer class="footer">
-        <a class="footer" href="">Términos y condiciones</a><br>
-        <a class="footer" href="">Preguntas frecuentes</a><br>
-        <a class="footer" href="">Ayuda</a>
-    </footer>
+        // Asignar eventos de entrada a los campos para validar en tiempo real, Toma los campos en el Input del usuarios,el error definido y el Pattern para hacer la validación.
+        document.getElementById("firstname").addEventListener("input", function () {
+            validarCampo("firstname", "error-firstname", /^[a-zA-Z\s]+$/);
+        });
 
-    <script src="validaciones.js"></script>
+        document.getElementById("lastname").addEventListener("input", function () {
+            validarCampo("lastname", "error-lastname", /^[a-zA-Z\s]+$/);
+        });
+
+        document.getElementById("direccion").addEventListener("input", function () {
+            validarCampo("direccion", "error-direccion", /^[a-zA-Z0-9\s]+$/);
+        });
+
+        document.getElementById("email").addEventListener("input", function () {
+            validarCampo("email", "error-email", /^[^\s@]+@[^\s@]+\.[^\s@]+$/);
+        });
+
+    </script>
+
+    <footer></footer>
 
 </body>
 

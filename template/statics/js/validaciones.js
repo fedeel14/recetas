@@ -18,3 +18,36 @@ function validarCampo(inputId, errorId, pattern) {
         error.style.display = "none";
     }
 }
+
+//Falidar ingreso Telefono DNI
+
+document.addEventListener("DOMContentLoaded", function() {
+    var inputDNI = document.getElementById("dni");
+
+    inputDNI.oninvalid = function(event) {
+        // Previene que el navegador muestre el mensaje de error por defecto
+        event.preventDefault();
+
+        // Verifica condiciones específicas de validez y establece mensajes personalizados
+        if (!event.target.validity.valid) {
+            document.getElementById("error-dni").style.display = "block";
+            if (event.target.validity.rangeUnderflow) {
+                document.getElementById("error-dni").textContent = "Por favor, ingrese un Documento válido. Sin puntos \".\"";
+            } else if (event.target.validity.rangeOverflow) {
+                document.getElementById("error-dni").textContent = "Por favor, ingrese un Documento válido. Sin puntos \".\"";
+            } else {
+                // Aquí se pueden añadir otras verificaciones de validez según sea necesario
+                document.getElementById("error-dni").textContent = "Por favor, ingrese un Documento válido. Sin puntos 3";
+            }
+        }
+    };
+
+    inputDNI.oninput = function(event) {
+        document.getElementById("error-dni").style.display = "none";
+    };
+});
+
+
+
+
+
