@@ -19,34 +19,6 @@ function validarCampo(inputId, errorId, pattern) {
     }
 }
 
-//Falidar ingreso Telefono DNI
-
-document.addEventListener("DOMContentLoaded", function() {
-    var inputDNI = document.getElementById("dni");
-
-    inputDNI.oninvalid = function(event) {
-        // Previene que el navegador muestre el mensaje de error por defecto
-        event.preventDefault();
-
-        // Verifica condiciones específicas de validez y establece mensajes personalizados
-        if (!event.target.validity.valid) {
-            document.getElementById("error-dni").style.display = "block";
-            if (event.target.validity.rangeUnderflow) {
-                document.getElementById("error-dni").textContent = "Por favor, ingrese un Documento válido. Sin puntos \".\"";
-            } else if (event.target.validity.rangeOverflow) {
-                document.getElementById("error-dni").textContent = "Por favor, ingrese un Documento válido. Sin puntos \".\"";
-            } else {
-                // Aquí se pueden añadir otras verificaciones de validez según sea necesario
-                document.getElementById("error-dni").textContent = "Por favor, ingrese un Documento válido. Sin puntos ";
-            }
-        }
-    };
-
-    inputDNI.oninput = function(event) {
-        document.getElementById("error-dni").style.display = "none";
-    };
-});
-
 
 // Asignar eventos de entrada a los campos para validar en tiempo real, Toma los campos en el Input del usuarios,el error definido y el Pattern para hacer la validación.
 document.getElementById("firstname").addEventListener("input", function () {
@@ -61,6 +33,10 @@ document.getElementById("direccion").addEventListener("input", function () {
     validarCampo("direccion", "error-direccion", /^[a-zA-Z0-9\s]+$/);
 });
 
+document.getElementById("dni").addEventListener("input", function () {
+    validarCampo("dni", "error-dni", /^\d{6,10}$/);
+});
+
 document.getElementById("telefono").addEventListener("input", function () {
     validarCampo("telefono", "error-telefono", /[0-9]{6,10}/);
 });
@@ -69,6 +45,38 @@ document.getElementById("email").addEventListener("input", function () {
     validarCampo("email", "error-email", /^[^\s@]+@[^\s@]+\.[^\s@]+$/);
 });
 
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Asegurarse de que el formulario esté completamente cargado antes de adjuntar el manejador de evento
+    document.getElementById('form-register').onsubmit = function(e) {
+        // Verificar Género
+        var generoSeleccionado = document.querySelector('input[name="genero"]:checked');
+        if (!generoSeleccionado) {
+            alert("Por favor, selecciona un género.");
+            e.preventDefault(); // Detener el envío del formulario
+            return false;
+        }
+
+        // Verificar Sala
+        var salaSeleccionada = document.querySelector('input[name="Nivel"]:checked');
+        if (!salaSeleccionada) {
+            alert("Por favor, selecciona una sala.");
+            e.preventDefault(); // Detener el envío del formulario
+            return false;
+        }
+
+        // Verificar Turno
+        var turnoSeleccionado = document.querySelector('input[name="turno"]:checked');
+        if (!turnoSeleccionado) {
+            alert("Por favor, selecciona un turno.");
+            e.preventDefault(); // Detener el envío del formulario
+            return false;
+        }
+
+        // Si todo está seleccionado correctamente, el formulario se enviará
+        return true;
+    };
+});
 
 
 

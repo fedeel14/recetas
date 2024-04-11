@@ -52,11 +52,11 @@
 
                     <div class="form-control">
                         <label for="dni">DNI:</label>
-                        <input type="number" name="dni" id="dni"
-                            title="No se pueden utilizar caracteres especiales. Solo números."
-                            placeholder="Escriba su Documento" required min="100000" max="9999999999"
-                            inputmode="numeric">
-                        <div class="error" id="error-dni">Por favor, ingrese un Documento válido.</div>
+                        <input type="text" name="dni" id="dni" 
+                            title="No se pueden utilizar caracteres especiales. Solo números." 
+                            placeholder="Escriba su Documento" required 
+                            inputmode="numeric" pattern="\d{6,10}">
+                        <div class="error" id="error-dni" style="display:none;">Por favor, ingrese un Documento válido. Sin puntos.</div>
                     </div>
 
 
@@ -115,7 +115,7 @@
 
                     <!-- Genero -->
                     <div class="form-control">
-                        <label for="">Género: </label>
+                        <label for="genero">Género: </label>
                         <input type="radio" name="genero" value="1" required>Masculino
                         <input type="radio" name="genero" value="2" required>Femenino
                         <input type="radio" name="genero" value="3" required>No Binario
@@ -124,7 +124,7 @@
 
                     <div class="form-control">
                         <!-- En este código, cada vez que se hace clic en una de las checkboxes, se llama a la función limitarSeleccion(this), donde this hace referencia a la checkbox que fue seleccionada. Esta función desactiva todas las otras checkboxes y deja solo la seleccionada. De esta manera, solo una opción puede ser seleccionada a la vez.  -->
-                        <label for="">Sala: </label>
+                        <label for="genero">Sala: </label>
                         <input type="checkbox" name="Nivel" value="1" onclick="limitarSeleccion(this)"> A
                         <input type="checkbox" name="Nivel" value="2" onclick="limitarSeleccion(this)"> B
                         <input type="checkbox" name="Nivel" value="3" onclick="limitarSeleccion(this)"> C
@@ -133,9 +133,9 @@
 
                     <!-- Turno -->
                     <div class="form-control">
-                        <label for="">Turno: </label>
-                        <input type="radio" name="genero" value="1" required>Mañana
-                        <input type="radio" name="genero" value="2" required>Tarde
+                        <label for="turno">Turno: </label>
+                        <input type="radio" name="turno" value="1" required>Mañana
+                        <input type="radio" name="turno" value="2" required>Tarde
                     </div>
 
                     <br><br>
